@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+:root{
+    --bg-dark: #000428;
+    --bg-light: #004e92;
+    --white: #fff;
+    --off-white: rgba(255, 255, 255, 0.7)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(var(--bg-dark), var(--bg-light));
+    height: 100%;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+#content{
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white);
+}
+
+/* form setting */
+#userForm{
+    padding: 2.5rem 0 2.5rem 0;
+}
+
+#place, #searchBtn{
+    padding: .5rem;
+    background: none;
+    border: 1px solid var(--white);
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+#searchBtn{
+    margin-left: .5rem;
+    transition: .3s ease-in-out;
+}
+
+#searchBtn:hover{
+    cursor: pointer;
+    color: var(--bg-dark);
+    background-color: var(--white);
+}
+/* form setting */
+
+/* weather content setting */
+#weather{
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    min-width: 60vw;
+}
+
+#header{
+    font-size: 4rem;
+}
+
+#location{
+    font-size: 2rem;
+}
+
+#date-time{
+    color: var(--off-white);
+    padding-top: .5rem;
+}
+
+#weatherCard{
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+#temp{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#status, #like{
+    font-size: 1.2rem;
+}
+
+hr{
+    margin: 1rem;
+}
+
+#condition{
+    margin: 2rem 0 1rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#condition p{
+    color: var(--off-white);
+}
+
+span{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    padding: .5rem 0;
+    width: 150px;
+}
+/* weather content setting*/
+
+/* footer setting */
+footer{
+    padding: 1rem;
+    color: var(--off-white);
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* loader */
+.loading-spinner {
+    border: 3px solid var(--white);
+    border-top: 3px solid var(--bg-light);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
