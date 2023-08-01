@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
         const place = userInput.value;
         const apiKey = '68cbc5e6dd544f58afd120120232707';
         loader();
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${place}`, {mode: 'cors'});
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${place}`, {mode: 'cors'});
         const data = await response.json(); // parsing raw data to JSON
         generateWeather(data);
         userInput.value = '';
